@@ -9,25 +9,41 @@ const promptUser = () => {
   return inquirer.prompt([
   {
      type: "input",
-     name: "name",
-     message: "What is your name?",
+     name: "title",
+     message: "What is the title of your project?",
   },
   {
      type: "input",
-     name: "location",
-     message: "What is your city name?",
+     name: "description",
+     message: "How did you install this project?",
   },
   {
     type: "input",
-    name: "hobby",
-     message: "What is your favorite hobby?",
+    name: "usage",
+     message: "What is the purpose of this project?",
   },
   {
      type: "list",
-    name: "cars",
-     message: "What brand of car do you drive",
-     choices: ["Dodge", "Ford", "Toyota", "Nissan", "Honda"],
+    name: "licenses",
+     message: "What license are you using?",
+     choices: ["Apache License 2.0", "Mit License", "Boostoftware License 1.0", "The Unlicense"],
   },
+  {
+   type: "input",
+   name: "contributing",
+    message: "Who contributed to this project?",
+ },
+ {
+   type: "input",
+   name: "tests",
+    message: "What tests did you run?",
+ },
+//  {
+//    type: "input",
+//    name: "questions",
+//     message: "What is the purpose of this project?",
+//  },
+
  ])};
  
  ``
@@ -36,19 +52,21 @@ const promptUser = () => {
   promptUser()
     // Use writeFile method imported from fs.promises to use promises instead of
     // a callback function
-    .then((answers) => writeFile('README.md', generateREADME(answers)))
+    .then((answers) =>{
+      console.log(answers)
+     return writeFile('README.md', generateREADME(answers))})
     .then(() => console.log('Successfully wrote an incredible README file'))
     .catch((err) => console.error(err));
 };
 
 init();
-const fs = () => {
-  promptUser()
-  .then((answers) => writeFile('userData.txt', (answers)))
-  // console.log(answers);
-  fs.then(() => console.log('Successfully wrote to user Date Text'))
-  .catch((err) => console.error(err));
-  };
+// const fs = () => {
+//   promptUser()
+//   .then((answers) => writeFile('userData.txt', (answers)))
+//   // console.log(answers);
+//   fs.then(() => console.log('Successfully wrote to user Date Text'))
+//   .catch((err) => console.error(err));
+//   };
 
 
 
