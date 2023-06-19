@@ -38,11 +38,16 @@ const promptUser = () => {
    name: "tests",
     message: "What tests did you run?",
  },
-//  {
-//    type: "input",
-//    name: "questions",
-//     message: "What is the purpose of this project?",
-//  },
+ {
+   type: "input",
+   name: "userName",
+    message: "What is your repository name?" 
+ },
+ {
+   type: "input",
+   name: "email",
+   message:"What is your email?",
+ },
 
  ])};
  
