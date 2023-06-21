@@ -66,7 +66,7 @@ const promptUser = () => {
     // a callback function
     .then((answers) =>{
       console.log(answers)
-     return writeFile('README.md', generateREADME(answers))})
+     return writeFile('README_sample.md', generateREADME(answers))})
     .then(() => console.log('Successfully wrote an incredible README file'))
     .catch((err) => console.error(err));
 };
