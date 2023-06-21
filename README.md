@@ -12,5 +12,5 @@
 [Video Demo](https://drive.google.com/file/d/1CXz2nsH3FxgklS4f43lsh1AZMxie7Y2e/view)
 
 ![Screen Shot](assets/images/Screenshot(119).png)
-[Screen Shot](assets/images/Screenshot(121).png)
-[Screen Shot](assets/images/Screenshot(122).png)
+![Screen Shot](assets/images/Screenshot(121).png)
+![Screen Shot](assets/images/Screenshot(122).png)
