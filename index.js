@@ -41,8 +41,9 @@ const promptUser = () => {
  {
    type: "input",
    name: "userName",
-    message: "What is your repository name?" 
+    message: "What is your user name?" 
  },
+ 
  {
    type: "input",
    name: "email",

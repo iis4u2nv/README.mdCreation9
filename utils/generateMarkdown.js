@@ -23,8 +23,9 @@ function renderTests(tests) {
   return `## Tests: ${tests}`
 }
 
-function renderUserName() {
-  return `![GitHub Profile](https://github.com/${'userName'})`;
+function renderUserName(userName) {
+  return `[GitHub Profile](https://github.com/${userName})`;
+  
 }
 function renderEmail(email) {
   return `Email ${email}`;
@@ -42,9 +43,8 @@ ${renderLicenseSection(data.licenses)}
 ${renderContributing(data.contributing)}
 ${renderTests(data.tests)}
 ## Questions
-${renderUserName(data.userName)}
-${renderEmail(data.email)}
-`;
+${renderUserName(data.userName)} ${renderEmail(data.email)}`
+
 }
 function renderContributing(contributing) {
   return `## Contributing: ${contributing}`
