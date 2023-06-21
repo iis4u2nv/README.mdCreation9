@@ -23,8 +23,8 @@ function renderTests(tests) {
   return `## Tests: ${tests}`
 }
 
-function renderUserName(userName) {
-  return `![GitHub Profile](https://github.com/${userName})`;
+function renderUserName() {
+  return `![GitHub Profile](https://github.com/${'userName'})`;
 }
 function renderEmail(email) {
   return `Email ${email}`;
@@ -52,25 +52,4 @@ function renderContributing(contributing) {
 
 module.exports = generateMarkdown;
 
-// function genHTML(result) {
-//   return `
-//   <!DOCTYPE html>
-// <html lang="en-US">
 
-//   <head>
-//     <meta charset="UTF-8">
-//     <title>Welcome to my page!</title>
-//   </head>
-
-//   <body>
-//     <h1>My first name is ${result.name}</h1>
-//     <h1>I'm currently in ${result.location}</h1>
-//     <h1>My favority hobby is ${result.hobby}</h1>
-//     <h1>I drive a ${result.cars}</h1>
-//   </body>
-
-// </html>
-//   `
-// }
-
-// module.exports = genHTML;

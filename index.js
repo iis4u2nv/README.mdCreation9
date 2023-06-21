@@ -26,7 +26,7 @@ const promptUser = () => {
      type: "list",
     name: "licenses",
      message: "What license are you using?",
-     choices: ["Apache License 2.0", "Mit License", "Boostoftware License 1.0", "The Unlicense"],
+     choices: ["apache 2.0", "MIT", "bsl 1.0", "unlicense"],
   },
   {
    type: "input",
@@ -47,12 +47,18 @@ const promptUser = () => {
    type: "input",
    name: "email",
    message:"What is your email?",
+   validate: (x) => {
+      const validator = x.match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/);
+      if(validator) {
+         return true;
+      } 
+      return 'Please choose a valid email'
+   }
  },
 
  ])};
  
- ``
-//  Created a function to write README file
+ //  Created a function to write README file
  const init = () => {
   promptUser()
     // Use writeFile method imported from fs.promises to use promises instead of
@@ -65,42 +71,4 @@ const promptUser = () => {
 };
 
 init();
-// const fs = () => {
-//   promptUser()
-//   .then((answers) => writeFile('userData.txt', (answers)))
-//   // console.log(answers);
-//   fs.then(() => console.log('Successfully wrote to user Date Text'))
-//   .catch((err) => console.error(err));
-//   };
 
-
-
-//  // TODO: Create a function to write README file
-
-
-
-// function writeFile(fileName, data) {
-//   fs.writeFile(fileName, data, function(err){
-//     console.log(err)
-//   })
-// }
-
-// // // TODO: Create a function to initialize app
-// function init() {
-//   inquirer
-//   .prompt(questions)
-//   .then((response) => {
-//     writeFile("index.html", JSON.stringify(response))
-//   })
-// }
-
-// // Function call to initialize app
-// init();
-
-
-//  const generateHTML = ({ name, location, hobby, cars })
-//  .then(function(result){
-//    fs.writeFile("sample.html", genHTML(result), function(err){
-//      console.log(err)
-//    })
-//  })
